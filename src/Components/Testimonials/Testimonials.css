@@ -1,0 +1,130 @@
+.testimonials{
+    margin: 80px auto;
+    padding: 0 80px;
+    position: relative;
+    width: 100%;
+    max-width: 80vw;
+}
+
+.nextBtn, .backBtn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #212ae0;
+}
+
+.backBtn{
+    right: auto;
+    left: 0;
+}
+
+.nextBtn:hover, .backBtn:hover{
+    background: #161eb4;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.slider ul li{
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+    user-select: none;
+}
+.slide{
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    padding: 40px;
+    border-radius: 10px;
+    color: #676767;
+    line-height: 1.4;
+}
+
+.slide img{
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #212ae0;
+}
+
+.userInfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.userInfo h3{
+    color: #212ae0;
+}
+
+/* media querry */
+
+@media (max-width:800px){
+    .testimonials{
+        padding: 0 40px;
+    }
+    .nextBtn,.backBtn{
+        padding: 10px ;
+        width: 35px;
+    }
+    .testimonials ul li{
+        padding: 10px;
+    }
+    .slide{
+        padding:10px;
+    }
+    .slide img{
+        width: 50px;
+        border: 1px solid #212ae0;
+    }
+}
+
+@media (max-width:600px){
+    .userInfo{
+        display: block;
+        flex-direction: column;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .userInfo h3{
+        font-size: 16px;
+    }
+    .slider p{
+        font-size:12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width:1000px){
+    .userInfo{
+        display: block;
+        flex-direction: column;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .slider p{
+        font-size:14px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
